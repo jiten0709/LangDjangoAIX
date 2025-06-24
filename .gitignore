@@ -197,4 +197,5 @@ cython_debug/
 .github/copilot-instructions.md
 
 # other files
-rough.py
+rough.*
+NOTES.md
