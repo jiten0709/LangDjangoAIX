@@ -18,11 +18,17 @@ def get_openai_model(model: Optional[str] = None):
     Returns:
         ChatOpenAI: An instance of the OpenAI model.
     """
+
+    token = get_openai_api_key()
+    endpoint = "https://models.github.ai/inference"
+    model = "openai/gpt-4.1"
+
     if model is None:
-        model = "gpt-4o-mini"
+        model = "openai/gpt-4.1"
     return ChatOpenAI(
         model=model,
         temperature=0,
         max_retries=2,
-        api_key=get_openai_api_key(), 
+        api_key=token, 
+        base_url=endpoint
     )

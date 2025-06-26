@@ -3,9 +3,9 @@ from openai import OpenAI
 from dotenv import load_dotenv
 load_dotenv()
 
-token = os.getenv("GITHUB_TOKEN")
+token = os.environ["GITHUB_TOKEN"]
 endpoint = "https://models.github.ai/inference"
-model_name = "openai/gpt-4o-mini"
+model = "openai/gpt-4.1"
 
 client = OpenAI(
     base_url=endpoint,
@@ -26,7 +26,7 @@ response = client.chat.completions.create(
     temperature=1.0,
     top_p=1.0,
     max_tokens=1000,
-    model=model_name
+    model=model
 )
 
 print(response.choices[0].message.content)
