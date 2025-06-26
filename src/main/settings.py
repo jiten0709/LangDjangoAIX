@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -124,3 +125,12 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+DJANGO_SECRET_KEY = config("DJANGO_SECRET_KEY", default=None)
+
+GITHUB_TOKEN = config("GITHUB_TOKEN", default=None)
+
+TMDB_API_KEY = config("TMDB_API_KEY", default=None)
+
+PERMIT_API_KEY = config("PERMIT_API_KEY", default=None)
+PERMIT_PDP_ENDPOINT = config("PERMIT_PDP_ENDPOINT", default="https://cloudpdp.api.permit.io")
