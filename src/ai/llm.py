@@ -13,7 +13,7 @@ def get_openai_model(model: Optional[str] = None):
     Get an instance of the OpenAI model with specified parameters.
     
     Args:
-        model (str): The model to use, defaults to "gpt-4o".
+        model (str): The model to use.
     
     Returns:
         ChatOpenAI: An instance of the OpenAI model.
@@ -23,8 +23,6 @@ def get_openai_model(model: Optional[str] = None):
     endpoint = "https://models.github.ai/inference"
     model = "openai/gpt-4.1"
 
-    if model is None:
-        model = "openai/gpt-4.1"
     return ChatOpenAI(
         model=model,
         temperature=0,

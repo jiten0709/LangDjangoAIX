@@ -4,8 +4,11 @@ from ai.tools import (
     document_tools,
     movie_discovery_tools
 )
+from django.conf import settings
 
-def get_document_agent(model="gpt-4o", checkpointer=None):
+model = settings.GITHUB_TOKEN
+
+def get_document_agent(model=model, checkpointer=None):
     llm_model = get_openai_model(model=model)
 
     agent = create_react_agent(
@@ -18,7 +21,7 @@ def get_document_agent(model="gpt-4o", checkpointer=None):
 
     return agent
 
-def get_movie_discovery_agent(model="gpt-4o", checkpointer=None):
+def get_movie_discovery_agent(model=model, checkpointer=None):
     llm_model = get_openai_model(model=model)
 
     agent = create_react_agent(
