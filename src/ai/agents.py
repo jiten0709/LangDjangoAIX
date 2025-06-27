@@ -6,7 +6,8 @@ from ai.tools import (
 )
 from django.conf import settings
 
-model = settings.GITHUB_TOKEN
+# model = settings.GITHUB_TOKEN
+model = "openai/gpt-4.1" 
 
 def get_document_agent(model=model, checkpointer=None):
     llm_model = get_openai_model(model=model)

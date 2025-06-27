@@ -128,7 +128,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DJANGO_SECRET_KEY = config("DJANGO_SECRET_KEY", default=None)
 
+# if using github api
 GITHUB_TOKEN = config("GITHUB_TOKEN", default=None)
+
+# if using openai api
+# OPENAI_API_KEY = config("OPENAI_API_KEY", default=None)
 
 TMDB_API_KEY = config("TMDB_API_KEY", default=None)
 
