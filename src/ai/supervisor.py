@@ -1,5 +1,5 @@
 from langgraph_supervisor import create_supervisor
-from llm import get_openai_model
+from ai.llm import get_openai_model
 from ai import agents
 
 def get_supervisor(model=None, checkpointer=None):
