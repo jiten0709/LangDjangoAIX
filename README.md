@@ -1,4 +1,4 @@
-# LangDjangoAIX 🚀: AI-Powered Language Assistant with Django
+# LangDjangoAIX 🚀: Multi-Agent AI System with Django & LangChain
 
 ## Overview
 
