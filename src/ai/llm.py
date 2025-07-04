@@ -22,8 +22,10 @@ def get_openai_model(model: Optional[str] = None):
     """
 
     token = get_openai_api_key()
-    endpoint = "https://models.github.ai/inference"
-    model = "openai/gpt-4.1"
+    endpoint = settings.GITHUB_ENDPOINT
+    model = settings.GITHUB_MODEL_NAME
+    if model is None:
+        model = "openai/gpt-4.1"
 
     return ChatOpenAI(
         model=model,

@@ -130,6 +130,8 @@ DJANGO_SECRET_KEY = config("DJANGO_SECRET_KEY", default=None)
 
 # if using github api
 GITHUB_TOKEN = config("GITHUB_TOKEN", default=None)
+GITHUB_MODEL_NAME = config("GITHUB_MODEL_NAME", default=None)
+GITHUB_ENDPOINT = config("GITHUB_ENDPOINT", default=None)
 
 # if using openai api
 # OPENAI_API_KEY = config("OPENAI_API_KEY", default=None)
@@ -137,4 +139,4 @@ GITHUB_TOKEN = config("GITHUB_TOKEN", default=None)
 TMDB_API_KEY = config("TMDB_API_KEY", default=None)
 
 PERMIT_API_KEY = config("PERMIT_API_KEY", default=None)
-PERMIT_PDP_ENDPOINT = config("PERMIT_PDP_ENDPOINT", default="https://cloudpdp.api.permit.io")
+PERMIT_PDP_ENDPOINT = config("PERMIT_PDP_ENDPOINT", default=None)
